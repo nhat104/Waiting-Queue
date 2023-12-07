@@ -20,7 +20,6 @@ const MenuLeft = () => {
     isMenuShadow,
     leftMenuWidth,
     menuColor,
-    logo,
   } = useSelector(selectSettings);
   const { role } = useSelector(selectUser);
   const { pathname } = useLocation();

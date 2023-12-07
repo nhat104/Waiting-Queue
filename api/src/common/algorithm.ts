@@ -1,6 +1,4 @@
-import * as bcrypt from 'bcrypt';
-import * as CryptoJS from 'crypto-js';
-import * as moment from 'moment';
+import CryptoJS from 'crypto-js';
 // random code tenant
 /**
  * function random code tenant
@@ -12,7 +10,7 @@ export const randomCodeTenant = (...params) => {
   const characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < Number(process.env.TENANT_CODE_LENGTH); i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;

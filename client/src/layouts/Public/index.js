@@ -1,20 +1,13 @@
-import { useEffect, useState } from "react";
-import { Avatar, Card, Col, Layout, Menu, Row } from "antd";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Layout, Row } from "antd";
 import classNames from "classnames";
 import Breadcrumbs from "components/cleanui/layout/Breadcrumbs";
 import Footer from "components/cleanui/layout/Footer";
-import MenuMain from "components/cleanui/layout/Menu";
-import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import { selectSettings } from "store/settingSlice";
-import { logoutUser, selectUser } from "store/userSlice";
-import IdleTimer from "components/system/IdleTimer";
 import TopBar from "components/cleanui/layout/TopBar";
+import IdleTimer from "components/system/IdleTimer";
+import { useSelector } from "react-redux";
+import { selectSettings } from "store/settingSlice";
 
 const PublicLayout = ({ children }) => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   const {
     isContentMaxWidth,
     isAppMaxWidth,
@@ -23,30 +16,6 @@ const PublicLayout = ({ children }) => {
     isCardShadow,
     isBorderless,
   } = useSelector(selectSettings);
-
-  const user = useSelector(selectUser);
-  const location = useLocation();
-
-  const [selectedMenu, setSelectedMenu] = useState("");
-
-  function getItem(label, key, icon) {
-    return {
-      label,
-      key,
-      icon,
-    };
-  }
-
-  const logout = () => {
-    // e.preventDefault()
-    dispatch(logoutUser());
-  };
-
-  const handleChangeMenu = (e) => {
-    if (e.key === "logout") {
-      logout();
-    }
-  };
 
   return (
     <div

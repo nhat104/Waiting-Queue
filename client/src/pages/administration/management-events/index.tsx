@@ -1,10 +1,10 @@
 import { DeleteOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import {
   useEventsControllerCreateEvent,
-  useEventsControllerFindAllEventUserCanSee,
-  useEventsControllerUpdateEvent,
   useEventsControllerFindAllEvent,
+  useEventsControllerFindAllEventUserCanSee,
   useEventsControllerRemoveEvent,
+  useEventsControllerUpdateEvent,
 } from "@api/waitingQueue";
 import { EventDto } from "@api/waitingQueue.schemas";
 import {
@@ -13,7 +13,6 @@ import {
   Col,
   Divider,
   List,
-  Pagination,
   Popconfirm,
   Row,
   Space,
@@ -25,7 +24,6 @@ import {
 import type { ColumnsType } from "antd/es/table";
 import Search from "antd/lib/input/Search";
 import EventForm from "components/administration/EventForm";
-import TenantForm from "components/administration/TenantForm";
 import _ from "lodash";
 import moment from "moment";
 import React, { useEffect, useState } from "react";

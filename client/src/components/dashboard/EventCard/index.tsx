@@ -1,10 +1,5 @@
-import {
-  DeleteColumnOutlined,
-  DeleteOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
 import { EventDto } from "@api/waitingQueue.schemas";
-import { Button, Card, Descriptions, Divider, Image, Row, Tag } from "antd";
+import { Card, Descriptions, Image, Row, Tag } from "antd";
 import moment from "moment";
 import React from "react";
 import { Link } from "react-router-dom";

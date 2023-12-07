@@ -1,34 +1,25 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import { Button, Form, Input } from "antd";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { CheckCircleFilled, SendOutlined } from "@ant-design/icons";
-import {
-  Input,
-  Button,
-  Form,
-  Modal,
-  Radio,
-  Checkbox,
-  Space,
-  Divider,
-  Row,
-  Col,
-} from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import store from "store";
-import ReCAPTCHA from "react-google-recaptcha";
 // import { useAuthenticate, useAuthenticateOTP, useSendOTP } from "@api/auth";
+import { useAuthControllerLogin } from "@api/waitingQueue";
 import settingsConfig from "configs/settingsConfig";
+import { ValidateEmail } from "services/utils/validates";
 import { loadCurrentAccount } from "store/userSlice";
 import style from "../style.module.scss";
-import { ValidateEmail } from "services/utils/validates";
-import { useAuthControllerLogin } from "@api/waitingQueue";
 
+// const initialAccount = {
+//   email: "xephang@super.admin.com",
+//   password: "123456Aa@",
+//   tenantCode: "qeGFUgg2Pw",
+// };
 const initialAccount = {
-  email: "xephang@super.admin.com",
-  password: "123456Aa@",
-  tenantCode: "qeGFUgg2Pw",
+  email: "nhat1042001@gmail.com",
+  password: "Su6%091a",
+  tenantCode: "X2V9Ji8eGw",
 };
 
 const Login = () => {
@@ -70,9 +61,9 @@ const Login = () => {
   return (
     <div className={`card ${style.container}`}>
       <img
-        onClick={() => {
-          location.href = "/";
-        }}
+        // onClick={() => {
+        //   location.href = "/";
+        // }}
         src="/resources/images/tf-logo.svg"
         style={{ height: 240 }}
         alt="Logo của bạn"

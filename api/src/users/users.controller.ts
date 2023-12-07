@@ -1,21 +1,17 @@
 import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-  ParseIntPipe,
-  Query,
-  UseGuards,
-  Req,
-  Res,
   BadRequestException,
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Patch,
+  Post,
+  Query,
+  Req,
+  UseGuards,
 } from '@nestjs/common';
-import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 import {
   ApiBadRequestResponse,
   ApiCreatedResponse,
@@ -24,14 +20,16 @@ import {
   ApiQuery,
   ApiTags,
 } from '@nestjs/swagger';
-import { UserDto } from './dto/user.dto';
-import { FilterOperator } from 'src/common/filters.vm';
 import { RoleGuard } from 'src/auth/role.guard';
 import { HasRole } from 'src/common/decorators';
 import { RoleEnum } from 'src/common/enum';
-import { Request } from 'express';
+import { FilterOperator } from 'src/common/filters.vm';
 import { LoggerService } from 'src/logger/logger.service';
+import { CreateUserDto } from './dto/create-user.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 import { UserMeDto } from './dto/user-me.dto';
+import { UserDto } from './dto/user.dto';
+import { UsersService } from './users.service';
 
 /**
  * UsersController class for users controller with CRUD operations for users

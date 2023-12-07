@@ -1,11 +1,7 @@
-import { QrcodeOutlined } from "@ant-design/icons";
 import { useQueuesControllerGetQrCode } from "@api/waitingQueue";
-import { Button, Card, Col, Drawer, Row, Typography } from "antd";
-import Title from "antd/lib/skeleton/Title";
-import Paragraph from "antd/lib/typography/Paragraph";
+import { Button, Card, Col, Drawer, Row } from "antd";
 import html2canvas from "html2canvas";
-import _ from "lodash";
-import { QRCodeSVG, QRCodeCanvas } from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -127,11 +123,7 @@ const QrCodeRender: React.FC<Props> = ({ isDynamic, name }) => {
               >
                 <b>{`Hàng đợi: ${name} `}</b>
               </Row>
-              <Row
-                justify="center"
-                // gutter={[20, 20]}
-                style={{ marginTop: "20px" }}
-              >
+              <Row justify="center" style={{ marginTop: "20px" }}>
                 <Button onClick={downloadQRCode} type="primary">
                   Tải xuống
                 </Button>
@@ -145,13 +137,9 @@ const QrCodeRender: React.FC<Props> = ({ isDynamic, name }) => {
                   // type="primary"
                   onClick={() => {
                     natigate(`/event/queue/${queueCode}/qrcode`, {
-                      state: {
-                        isDynamic,
-                        name,
-                      },
+                      state: { isDynamic, name },
                     });
                   }}
-                  // icon="fa fa-new"
                 >
                   Mở sang trang mới
                 </Button>
@@ -211,7 +199,6 @@ const QrCodeRender: React.FC<Props> = ({ isDynamic, name }) => {
                       },
                     });
                   }}
-                  // icon="fa fa-new"
                 >
                   Mở sang trang mới
                 </Button>

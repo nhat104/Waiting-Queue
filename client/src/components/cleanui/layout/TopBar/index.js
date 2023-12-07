@@ -1,10 +1,9 @@
+import { Button, Col, Row } from "antd";
+import QrCodeComponent from "components/dashboard/QrCode";
 import { useSelector } from "react-redux";
 import { selectUser } from "store/userSlice";
-import { Button, Col, Row } from "antd";
-import LanguageSwitcher from "./LanguageSwitcher";
 import UserMenu from "./UserMenu";
 import style from "./style.module.scss";
-import QrCodeComponent from "components/dashboard/QrCode";
 
 const TopBar = () => {
   const user = useSelector(selectUser);

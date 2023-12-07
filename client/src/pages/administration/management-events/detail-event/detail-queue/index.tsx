@@ -14,34 +14,27 @@ import {
   EnrollQueuesControllerFindAllEnrollQueueStatus,
   UpdateQueueDto,
   UpdateQueueDtoStatus,
-  UpdateUserDtoStatus,
 } from "@api/waitingQueue.schemas";
 import {
-  Badge,
   Breadcrumb,
   Button,
   Card,
   Col,
-  Descriptions,
   Divider,
-  Menu,
   Row,
   Tabs,
   Typography,
 } from "antd";
 import InformationEventCard from "components/administration/EventForm/InformationEventCard";
-import ManagementQueues from "components/administration/EventForm/QueueDataTable";
 import ManagementEnrollQueues from "components/administration/QueueForm/EnrollQueueDataTable";
 import InformationQueueCard from "components/administration/QueueForm/InformationQueueCard";
 import StatisticData from "components/administration/QueueForm/StatisticData";
-import _ from "lodash";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import {
-  DEFAULT_PAGE_SIZE,
   STATUS_ENROLL_QUEUE_ENUM,
   STATUS_QUEUE_ENUM,
 } from "services/utils/constants";
@@ -160,7 +153,7 @@ const DetailEvent = () => {
 
   const handleNextSerial = async () => {
     getStatisticQueue();
-setIsRefetch(!isRefetch);
+    setIsRefetch(!isRefetch);
     // if have current serial
     if (currentSerial) {
       // update status current serial to done

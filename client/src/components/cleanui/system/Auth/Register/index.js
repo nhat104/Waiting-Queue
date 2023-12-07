@@ -1,13 +1,11 @@
-import { connect, useDispatch, useSelector } from "react-redux";
-import { Input, Button, Form, notification } from "antd";
+import { useTenantsControllerRegisterTenant } from "@api/waitingQueue";
+import { Button, Form, Input, notification } from "antd";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { ValidateEmail } from "services/utils/validates";
 import { selectUser } from "store/userSlice";
 import style from "../style.module.scss";
-import { ValidateEmail } from "services/utils/validates";
-import { useTenantsControllerRegisterTenant } from "@api/waitingQueue";
-import { useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import React from "react";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -59,9 +57,9 @@ const Register = () => {
     <div className="mt-2">
       <div className={`card ${style.container}`}>
         <img
-          onClick={() => {
-            location.href = "/";
-          }}
+          // onClick={() => {
+          //   location.href = "/";
+          // }}
           src="/resources/images/tf-logo.svg"
           style={{ height: 240 }}
           alt="Logo của bạn"

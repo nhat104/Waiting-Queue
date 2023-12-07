@@ -73,3 +73,1196 @@
 [2023-06-12T07:58:52.281Z][QUERY ERROR]: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''0', '1', '2') NOT NULL DEFAULT '0'' at line 1
 [2023-06-12T07:58:55.618Z][FAILED QUERY]: ALTER TABLE `Queues` ADD `method_generate_code` int ('0', '1', '2') NOT NULL DEFAULT '0'
 [2023-06-12T07:58:55.618Z][QUERY ERROR]: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''0', '1', '2') NOT NULL DEFAULT '0'' at line 1
+[2023-11-13T10:57:44.562Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-13T10:57:44.562Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-22T12:07:01.464Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-22T12:07:01.464Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-23T01:58:14.723Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-23T01:58:14.723Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-23T02:49:54.445Z][FAILED QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+                
+[2023-11-23T02:49:54.445Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:49:54.447Z][FAILED QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2023-11-23T02:49:54.447Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:49:54.448Z][FAILED QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2023-11-23T02:49:54.448Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:49:54.449Z][FAILED QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2023-11-23T02:49:54.449Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:49:54.450Z][FAILED QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2023-11-23T02:49:54.450Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:49:54.453Z][FAILED QUERY]: ROLLBACK
+[2023-11-23T02:49:54.453Z][QUERY ERROR]: Error: Can't add new command when connection is in closed state
+[2023-11-23T02:51:50.217Z][FAILED QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+                
+[2023-11-23T02:51:50.217Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:51:50.218Z][FAILED QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2023-11-23T02:51:50.218Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:51:50.220Z][FAILED QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2023-11-23T02:51:50.220Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:51:50.220Z][FAILED QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2023-11-23T02:51:50.220Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:51:50.221Z][FAILED QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2023-11-23T02:51:50.221Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:51:50.224Z][FAILED QUERY]: ROLLBACK
+[2023-11-23T02:51:50.224Z][QUERY ERROR]: Error: Can't add new command when connection is in closed state
+[2023-11-23T02:52:29.018Z][FAILED QUERY]: 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+                 UNION 
+                SELECT
+                    *
+                FROM
+                    `INFORMATION_SCHEMA`.`COLUMNS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+                
+[2023-11-23T02:52:29.018Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:52:29.019Z][FAILED QUERY]: SELECT * FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu` WHERE `CONSTRAINT_NAME` = 'PRIMARY'
+[2023-11-23T02:52:29.019Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:52:29.020Z][FAILED QUERY]: 
+            SELECT
+                `SCHEMA_NAME`,
+                `DEFAULT_CHARACTER_SET_NAME` as `CHARSET`,
+                `DEFAULT_COLLATION_NAME` AS `COLLATION`
+            FROM `INFORMATION_SCHEMA`.`SCHEMATA`
+            
+[2023-11-23T02:52:29.020Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:52:29.022Z][FAILED QUERY]: 
+            SELECT
+                `s`.*
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`STATISTICS`
+                WHERE
+                    `TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `s`
+            LEFT JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `s`.`INDEX_NAME` = `rc`.`CONSTRAINT_NAME`
+                    AND
+                    `s`.`TABLE_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA`
+            WHERE
+                `s`.`INDEX_NAME` != 'PRIMARY'
+                AND
+                `rc`.`CONSTRAINT_NAME` IS NULL
+            
+[2023-11-23T02:52:29.022Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:52:29.023Z][FAILED QUERY]: 
+            SELECT
+                `kcu`.`TABLE_SCHEMA`,
+                `kcu`.`TABLE_NAME`,
+                `kcu`.`CONSTRAINT_NAME`,
+                `kcu`.`COLUMN_NAME`,
+                `kcu`.`REFERENCED_TABLE_SCHEMA`,
+                `kcu`.`REFERENCED_TABLE_NAME`,
+                `kcu`.`REFERENCED_COLUMN_NAME`,
+                `rc`.`DELETE_RULE` `ON_DELETE`,
+                `rc`.`UPDATE_RULE` `ON_UPDATE`
+            FROM (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` `kcu`
+                WHERE
+                    `kcu`.`TABLE_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `kcu`.`TABLE_NAME` = 'RelQueuesUsers'
+            ) `kcu`
+            INNER JOIN (
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Sessions'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'EnrollQueues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Queues'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Events'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Users'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'Tenants'
+             UNION 
+                SELECT
+                    *
+                FROM `INFORMATION_SCHEMA`.`REFERENTIAL_CONSTRAINTS`
+                WHERE
+                    `CONSTRAINT_SCHEMA` = 'xephang_nhatmm'
+                    AND
+                    `TABLE_NAME` = 'RelQueuesUsers'
+            ) `rc`
+                ON
+                    `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`CONSTRAINT_SCHEMA`
+                    AND
+                    `rc`.`TABLE_NAME` = `kcu`.`TABLE_NAME`
+                    AND
+                    `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+            
+[2023-11-23T02:52:29.023Z][QUERY ERROR]: Error: read ECONNRESET
+[2023-11-23T02:52:29.025Z][FAILED QUERY]: ROLLBACK
+[2023-11-23T02:52:29.025Z][QUERY ERROR]: Error: Can't add new command when connection is in closed state
+[2023-11-23T03:27:46.469Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-23T03:27:46.469Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-23T13:00:29.992Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-23T13:00:29.992Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-23T14:07:21.465Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-23T14:07:21.466Z][QUERY ERROR]: Error: write ECONNABORTED
+[2023-11-30T12:14:44.573Z][FAILED QUERY]: SELECT `Event`.`created_at` AS `Event_created_at`, `Event`.`updated_at` AS `Event_updated_at`, `Event`.`id` AS `Event_id`, `Event`.`name` AS `Event_name`, `Event`.`from` AS `Event_from`, `Event`.`to` AS `Event_to`, `Event`.`note` AS `Event_note`, `Event`.`place` AS `Event_place`, `Event`.`draw_image_path` AS `Event_draw_image_path`, `Event`.`daily` AS `Event_daily`, `Event`.`description` AS `Event_description`, `Event`.`status` AS `Event_status`, `Event`.`tenant_id` AS `Event_tenant_id`, `Event`.`user_id` AS `Event_user_id` FROM `Events` `Event` WHERE (`Event`.`status` = ? AND NOT(`Event`.`from` IS NULL) AND NOT(`Event`.`to` IS NULL)) -- PARAMETERS: [true]
+[2023-11-30T12:14:44.575Z][QUERY ERROR]: Error: write ECONNABORTED

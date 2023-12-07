@@ -1,19 +1,11 @@
 import { Layout, Row } from "antd";
-import { useSelector } from "react-redux";
 import classNames from "classnames";
-// import TopBar from 'components/cleanui/layout/TopBar'
+import { useSelector } from "react-redux";
 import Breadcrumbs from "components/cleanui/layout/Breadcrumbs";
-import Menu from "components/cleanui/layout/Menu";
 import Footer from "components/cleanui/layout/Footer";
-import { selectSettings } from "store/settingSlice";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { selectUser } from "store/userSlice";
+import Menu from "components/cleanui/layout/Menu";
 import IdleTimer from "components/system/IdleTimer";
-import Sidebar from "components/cleanui/layout/Sidebar";
-// import Sidebar from 'components/cleanui/layout/Sidebar'
-// import SupportChat from 'components/cleanui/layout/SupportChat'
-import UserMenu from "components/cleanui/layout/TopBar/UserMenu";
+import { selectSettings } from "store/settingSlice";
 import TopBar from "components/cleanui/layout/TopBar";
 
 const MainLayout = ({ children }) => {
@@ -25,8 +17,6 @@ const MainLayout = ({ children }) => {
     isCardShadow,
     isBorderless,
   } = useSelector(selectSettings);
-  const navigate = useNavigate();
-  const user = useSelector(selectUser);
 
   return (
     <div

@@ -18,7 +18,6 @@ export default [
     title: "Danh sách đối tác",
     key: "management-tenant",
     url: "/manage/tenant",
-
     icon: "fa fa-building-o",
     roles: ["SUPER ADMIN"],
   },
@@ -26,7 +25,6 @@ export default [
     title: "Danh sách tài khoản",
     key: "management-account",
     url: "/manage/account",
-
     icon: "fe fe-users",
     roles: ["ADMIN", "SUPER ADMIN"],
   },

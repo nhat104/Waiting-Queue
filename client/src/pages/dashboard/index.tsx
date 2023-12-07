@@ -1,46 +1,36 @@
-import React, { FC, useEffect } from "react";
-import { Carousel, Divider } from "antd";
-// import { useGetSlideConfig } from "@api/manage";
-import { Helmet } from "react-helmet";
-import { FILE_EXPORT } from "services/utils/File";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import SwiperCore, { Autoplay } from "swiper";
-import StatisticCard from "components/dashboard/StatisticCard";
-import EventCard from "components/dashboard/EventCard";
-import Title from "antd/lib/typography/Title";
 import {
   useEventsControllerFindAllEvent,
   useEventsControllerFindAllEventUserCanSee,
   useQueuesControllerCountFindAllQueue,
-  useQueuesControllerCountFindAllQueueUserCanSee,
 } from "@api/waitingQueue";
+import { Divider } from "antd";
+import Title from "antd/lib/typography/Title";
+import EventCard from "components/dashboard/EventCard";
+import StatisticCard from "components/dashboard/StatisticCard";
+import React, { FC, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useSelector } from "react-redux";
 import { selectUser } from "store/userSlice";
+import SwiperCore, { A11y, Autoplay, Navigation, Scrollbar } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 SwiperCore.use([Autoplay]);
 
 const DashboardAlpha: FC = () => {
   const [data, setData] = React.useState([]);
   const { role } = useSelector(selectUser);
-  const onChange = () => {};
-  const {
-    refetch: getAllMyEvent,
-    isFetching: loadingMyData,
-    data: myEvent,
-  } = useEventsControllerFindAllEventUserCanSee({
-    page: 1,
-    size: 5,
-  });
-  const {
-    refetch: getAllEvent,
-    isFetching: loadingData,
-    data: dataEvent,
-  } = useEventsControllerFindAllEvent({
-    page: 1,
-    size: 5,
-    sort: "id:DESC",
-  });
+
+  const { refetch: getAllMyEvent, data: myEvent } =
+    useEventsControllerFindAllEventUserCanSee({
+      page: 1,
+      size: 5,
+    });
+  const { refetch: getAllEvent, data: dataEvent } =
+    useEventsControllerFindAllEvent({
+      page: 1,
+      size: 5,
+      sort: "id:DESC",
+    });
 
   const { refetch: getAllQueue, data: dataQueue } =
     useQueuesControllerCountFindAllQueue();

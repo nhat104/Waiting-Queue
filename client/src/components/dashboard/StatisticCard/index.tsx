@@ -1,12 +1,6 @@
-import React from "react";
-import {
-  ArrowDownOutlined,
-  ArrowUpOutlined,
-  CalendarOutlined,
-  UpCircleFilled,
-  UserAddOutlined,
-} from "@ant-design/icons";
+import { CalendarOutlined, UpCircleFilled } from "@ant-design/icons";
 import { Card, Col, Row, Statistic } from "antd";
+import React from "react";
 
 interface IStatisticCardProps {
   totalEvent: number;

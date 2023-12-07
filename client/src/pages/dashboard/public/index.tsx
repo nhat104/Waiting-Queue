@@ -1,30 +1,8 @@
-import React, { useEffect } from "react";
-import {
-  Alert,
-  Badge,
-  Button,
-  Card,
-  Col,
-  Descriptions,
-  Divider,
-  Row,
-  Spin,
-  Typography,
-} from "antd";
 import { useEnrollQueuesControllerFindAllMyEnrollQueue } from "@api/waitingQueue";
-import Title from "antd/lib/skeleton/Title";
-import {
-  StatusEnrollQueueRender,
-  StatusEnrollQueueRenderColor,
-  StatusQueueRender,
-} from "services/utils/format";
-import { QRCodeCanvas, QRCodeSVG } from "qrcode.react";
-import {
-  EnrollQueueDto,
-  EnrollQueuesControllerUpdateStatusEnrollQueueStatus,
-} from "@api/waitingQueue.schemas";
+import { EnrollQueueDto } from "@api/waitingQueue.schemas";
+import { Alert, Card, Col, Row, Spin, Typography } from "antd";
 import EnrollQueuePublicCard from "components/dashboard/EnrollQueuePublicCard";
-import addNotification from "react-push-notification";
+import React, { useEffect } from "react";
 import { STATUS_QUEUE_ENUM } from "services/utils/constants";
 
 // const vibrateMobile = () => {

@@ -1,9 +1,9 @@
-import { Equal, FilterQuery, Not } from 'typeorm';
+import { Equal, Not } from 'typeorm';
 import { ALLOW_UPLOAD_FILE } from './constants';
 
 type Operator = (value: string) => any;
 interface Obj {
-  [key: string]: Obj | FilterQuery<any> | any;
+  [key: string]: Obj | any;
 }
 
 // export deepstring to object like: 'a.b.c:d' => {a: {b: {c: operator('d')}}}
